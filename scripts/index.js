@@ -191,7 +191,7 @@ function renderCardMain() {
 function renderCards() {
   const cards = elementGenerator('div', 'cards');
 
-  projects.forEach((project, index) => {
+  projects.reduce((project, index) => {
     if (index > 0) {
       const card = renderCard(project);
       cards.appendChild(card);
